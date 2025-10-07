@@ -60,7 +60,9 @@ function monthYearMatches(text, mm, yyyy) {
 
 (async () => {
   const browser = await puppeteer.launch({
-    headless: false, // ver o que está acontecendo - mudar para true para rodar em background
+    headless: true,
+args: ["--no-sandbox", "--disable-setuid-sandbox"]
+ // ver o que está acontecendo - mudar para true para rodar em background
     defaultViewport: null
   });
 
