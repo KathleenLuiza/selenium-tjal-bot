@@ -7,14 +7,15 @@ Salve em um arquivo com esse nome e rode com node tj-al-automation.js <processo>
 const puppeteer = require('puppeteer');
 
 if (process.argv.length < 5) {
-  console.log('Uso: node tj-al-automation.js "<numero_processo>" <mes(02)> <ano(2024)>');
+  console.log('Uso: node tj-al-automation.js "<numero_processo>" <mes> <ano>');
   process.exit(1);
 }
 
-const PROCESS_NUMBER = process.argv[2];
-const TARGET_MONTH = process.argv[3].padStart(2, '0'); // ex: "05"
-const TARGET_YEAR = process.argv[4]; // ex: "2024"
-const SITE_URL = 'https://www2.tjal.jus.br/cpopg/open.do';
+
+const PROCESS_NUMBER = process.argv[2] || ''; // vazio pega todos
+const TARGET_MONTH = process.argv[3] || '';   // vazio pega todos
+const TARGET_YEAR = process.argv[4] || '';    // vazio pega todos
+
 
 // ----- CONFIGURAR AQUI se necessário -----
 const config = {
