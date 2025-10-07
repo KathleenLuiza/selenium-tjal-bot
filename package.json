@@ -1,0 +1,12 @@
+{
+  "name": "tj-al-automation",
+  "version": "1.0.0",
+  "main": "tj-al-automation.js",
+  "type": "module",
+  "dependencies": {
+    "puppeteer": "^23.3.0"
+  },
+  "scripts": {
+    "start": "node tj-al-automation.js \"0000000-00.0000.0.00.0000\" 05 2024"
+  }
+}
